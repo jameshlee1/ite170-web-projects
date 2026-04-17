@@ -1,0 +1,150 @@
+<!--
+  NOVA STUDENTS:
+  If you are using this code for any NOVA class, you must
+  explain what the HTML AND CSS code does in your own words.
+
+  ITD classes (ITD 110, ITD 210, etc.):
+    DETAILED comments required for both HTML and CSS.
+    HTML — explain what each tag does, why you used it,
+    and how elements are nested.
+    CSS — explain what every property does and why.
+
+  ITE classes (ITE 115, ITE 140, etc.):
+    A GENERAL description of each section is acceptable
+    for both the HTML and CSS.
+
+  Do NOT submit this file without your own explanations.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Manchester United FC</title>
+<link rel="stylesheet" href="/css/styles.css"/>
+</head>
+<body>
+
+<!-- ========== NAVIGATION ========== -->
+<nav class="navbar">
+  <a href="#" class="nav-logo"> Man United</a>
+
+  <!-- Hamburger button (visible on mobile only) -->
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <!-- Links (hidden on mobile, shown on desktop) -->
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#features">History</a></li>
+    <li><a href="#about">The Club</a></li>
+    <li><a href="#" class="nav-btn">Old Trafford</a></li>
+  </ul>
+</nav>
+
+<!-- ========== HERO ========== -->
+<!-- The hero sits outside the container so it can go full-width -->
+<section class="hero">
+  <div class="hero-content">
+    <span class="hero-eyebrow">Est. 1878 &mdash; Manchester, England</span>
+    <h1>Welcome to the<br/><em>Theatre of Dreams.</em></h1>
+    <p>20 league titles. 3 European Cups. One of the most iconic football clubs in history. This is the story of Manchester United.</p>
+    <div class="hero-buttons">
+      <a href="#features" class="btn-primary">Explore the Club</a>
+      <a href="#about" class="btn-outline">Club History</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== MAIN CONTAINER ========== -->
+<!-- The .container wraps all content sections to keep them centered -->
+<main class="container">
+
+<!-- ========== FEATURES ========== -->
+<section class="section" id="features">
+  <span class="section-eyebrow">Explore</span>
+  <h2 class="section-title">The legacy. The glory. The club.</h2>
+  <p class="section-desc">From Newton Heath to Old Trafford — discover what makes Manchester United one of the greatest clubs in football.</p>
+
+  <div class="card-grid">
+
+    <!-- Card 1 -->
+    <div class="card">
+      <!-- YOUR IMAGE: Replace src with your own image -->
+      <img class="card-img" src="images/newtonheath.png" alt="feature"/>
+      <div class="card-body">
+        <div class="card-title">The History</div>
+        <p class="card-desc">From a railway workers team in 1878 to one of the most decorated clubs on earth. A story built on grit and belief.</p>
+        <a href="#" class="card-link">Learn more &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <img class="card-img" src="images/cantona.png" alt="feature"/>
+      <div class="card-body">
+        <div class="card-title">The Legends</div>
+        <p class="card-desc">Cantona. Keane. Ronaldo. Rooney. United has produced some of the greatest players the game has ever seen.</p>
+        <a href="#" class="card-link">Learn more &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <img class="card-img" src="images/oldtraffordtrinity.jpg" alt="feature"/>
+      <div class="card-body">
+        <div class="card-title">Old Trafford</div>
+        <p class="card-desc">Home since 1910. Over 74,000 seats and one of the most famous stadiums in football — the Theatre of Dreams.</p>
+        <a href="#" class="card-link">Learn more &rarr;</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ========== ABOUT ========== -->
+<section class="section" id="about">
+  <span class="section-eyebrow">About</span>
+  <h2 class="section-title">More than just a football club.</h2>
+  <p class="section-desc">Manchester United started as a railway workers team and grew into a global club with over a billion fans worldwide.</p>
+
+  <div class="split">
+    <div class="split-text">
+      <span class="section-eyebrow">Club Heritage</span>
+      <h2 class="section-title">Built on belief and hard work.</h2>
+      <p class="section-desc">Under Sir Matt Busby, United rose from the Munich air disaster in 1958 to win the European Cup ten years later. Then Sir Alex Ferguson made them the most dominant team in English football — 13 league titles in 27 seasons.</p>
+      <a href="#" class="btn-primary">View Project</a>
+    </div>
+    <!-- YOUR IMAGE: Replace src with your own photo -->
+    <img class="split-img" src="images/busbyalex.jpg" alt="project"/>
+  </div>
+</section>
+
+</main><!-- end .container -->
+
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="footer-links">
+    <a href="#">Home</a>
+    <a href="#features">History</a>
+    <a href="#about">About</a>
+  </div>
+  <p>&copy; 2026 James Lee &mdash; Built with HTML &amp; CSS</p>
+  <p>ITE 170 Northern Virginia Community College</p>
+</footer>
+
+<!-- ========== HAMBURGER TOGGLE (JavaScript) ========== -->
+<script>
+  // Toggle mobile nav open/closed
+  document.getElementById("navToggle").addEventListener("click", function() {
+    document.getElementById("navLinks").classList.toggle("open");
+    this.classList.toggle("open");
+  });
+</script>
+
+</body>
+</html>
